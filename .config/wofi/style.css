@@ -1,0 +1,27 @@
+@import url("/home/collinyin/.config/sway/theme.css");
+
+* {
+	font-size: 16px;
+}
+
+window {
+	/* background-color: alpha(@theme_bg, 0.8);*/
+	background-color: @theme_bg;
+	border: 1px solid @theme_accent;
+	border-radius: 0px;
+}
+
+#input {
+	color: rgba(255, 255, 255, 1.0);
+	background-color: @theme_bg;
+	border-radius: 0px;
+	border-color: @theme_accent;
+}
+
+#entry:selected {
+	background-color: rgba(0, 0, 0, 1.0);
+	border-left: 2px solid @theme_accent;
+	border-right: 2px solid @theme_accent;
+	border-top: 2px solid @theme_accent;
+	border-bottom: 2px solid @theme_accent;
+}

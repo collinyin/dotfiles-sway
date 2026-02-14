@@ -1,0 +1,43 @@
+/* https://github.com/mechakotik/dots/blob/main/.config/waybar/style.css */ 
+
+@import url("/home/collinyin/.config/sway/theme.css");
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: white;
+    background-color: @theme_bg_dark;
+}
+
+#workspaces button {
+    color: white;
+    padding-left: 0.7em;
+}
+
+#workspaces button label {
+    padding-right: 1.1em;
+}
+
+#workspaces button.focused label {
+    color: @theme_accent;
+}
+
+#clock,
+#memory,
+#wireplumber,
+#battery,
+#idle_inhibitor,
+#language,
+#temperature,
+#network,
+#bluetooth,
+#cpu,
+#tray {
+    padding-right: 1em 
+}
+
