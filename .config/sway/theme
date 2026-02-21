@@ -1,17 +1,7 @@
-# Colors
-set $theme_accent #F2E205
-set $theme_bright_accent #22DDF2
-set $theme_color #F2CB05
-set $theme_dull_accent #8C6A03
-set $theme_bg #0D0D0D
-set $theme_text #FFFFFF
+include ~/.cache/wal/colors-sway
 
 # Fonts
-set $theme_font pango:JetBrainsMono Nerd Font
-
-### Theme global overrides
-# Font
-font $theme_font 10
+font pango:Maple Mono, Noto Sans CJK JP 10
 
 # Windows
-client.focused $theme_accent $theme_bg $theme_text $theme_bright_accent $theme_accent
+client.focused $color1 $background $foreground $color6 $color1

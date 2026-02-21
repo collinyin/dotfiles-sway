@@ -25,31 +25,38 @@ include ~/.config/sway/theme
 # Automatic management of monitor profiles using kanshi
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 # https://github.com/emersion/kanshi/issues/43#issuecomment-531679213
-exec_always "pkill kanshi; exec kanshi"
+
+## work-glinux
+#exec_always "pkill kanshi; exec kanshi"
 # When the lid is closed, disable the internal screen
-bindswitch --locked lid:on output eDP-1 disable
+#bindswitch --locked lid:on output eDP-1 disable
 # When the lid is opened, re-enable the internal screen
-bindswitch --locked lid:off output eDP-1 enable
+#bindswitch --locked lid:off output eDP-1 enable
 # Manually toggle internal monitor enable/disable
-bindsym --locked $mod+m output eDP-1 enable
-bindsym --locked $mod+Shift+m output eDP-1 disable
+#bindsym --locked $mod+m output eDP-1 enable
+#bindsym --locked $mod+Shift+m output eDP-1 disable
+
+## home-arch
+output HDMI-A-2 mode 1920x1080@144Hz position 0 0
+output HDMI-A-1 mode 1920x1080@144Hz position 1920 0
+bindsym --locked $mod+m output HDMI-A-2 enable
+bindsym --locked $mod+Shift+m output HDMI-A-2 disable
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg fill
-swaybg_command -
-exec_always pkill swaybg; swaybg -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg -m fill
+output * bg /usr/share/backgrounds/collin/aapa.png fill
+# swaybg_command -
+# exec_always pkill swaybg; swaybg -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg -m fill
 
 ### Idle configuration
 
 exec swayidle -w \
-    timeout 300 'swaylock -f -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg' \
+    timeout 300 'swaylock -f -i /usr/share/backgrounds/collin/aapa.png' \
     timeout 3600 'systemctl suspend' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg'
+    before-sleep 'swaylock -f -i /usr/share/backgrounds/collin/aapa.png'
 
 # Lock screen
-bindsym $mod+Ctrl+q exec swaylock --image /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg --color 000000
-bindsym $mod+Ctrl+Shift+q exec swaylock --image /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg -f --color 000000 && systemctl suspend
+bindsym $mod+Ctrl+q exec swaylock --image /usr/share/backgrounds/collin/aapa.png --color 000000
+bindsym $mod+Ctrl+Shift+q exec swaylock --image /usr/share/backgrounds/collin/aapa.png -f --color 000000 && systemctl suspend
 
 ### Input configuration
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -79,7 +86,7 @@ input "1133:45098:Logitech_Signature_M650_L" {
 # Basics:
 #
 # Start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec $term --directory ~
 
 # Kill focused window
 bindsym $mod+q kill
@@ -88,7 +95,7 @@ bindsym $mod+q kill
 bindsym $mod+Space exec $menu
 
 # Start chrome
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec google-chrome-stable
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

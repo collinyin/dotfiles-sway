@@ -1,7 +1,0 @@
-include ~/.cache/wal/colors-sway
-
-# Fonts
-font pango:Maple Mono, Noto Sans CJK JP 10
-
-# Windows
-client.focused $color1 $background $foreground $color6 $color1
