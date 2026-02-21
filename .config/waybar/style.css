@@ -1,9 +1,9 @@
 /* https://github.com/mechakotik/dots/blob/main/.config/waybar/style.css */ 
 
-@import url("/home/collinyin/.config/sway/theme.css");
+@import url("/home/collin/.cache/wal/colors-wofi.css");
 
 * {
-    font-family: JetBrainsMono Nerd Font;
+    font-family: Maple Mono;
     font-size: 17px;
     padding: 0;
     margin: 0;
@@ -11,7 +11,7 @@
 
 #waybar {
     color: white;
-    background-color: @theme_bg_dark;
+    background-color: @background;
 }
 
 #workspaces button {
@@ -24,7 +24,7 @@
 }
 
 #workspaces button.focused label {
-    color: @theme_accent;
+    color: @color1;
 }
 
 #clock,

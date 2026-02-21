@@ -1,27 +1,27 @@
-@import url("/home/collinyin/.config/sway/theme.css");
+@import "/home/collin/.cache/wal/colors-wofi.css";
 
 * {
 	font-size: 16px;
+	color: white;
 }
 
-window {
-	/* background-color: alpha(@theme_bg, 0.8);*/
-	background-color: @theme_bg;
-	border: 1px solid @theme_accent;
+#window {
+	font-family: "Maple Mono";
+	background-color: @color0;
+	border: 1px solid @color1;
 	border-radius: 0px;
 }
 
 #input {
-	color: rgba(255, 255, 255, 1.0);
-	background-color: @theme_bg;
+	background-color: @color0;
 	border-radius: 0px;
-	border-color: @theme_accent;
+	border-color: @color1;
 }
 
 #entry:selected {
-	background-color: rgba(0, 0, 0, 1.0);
-	border-left: 2px solid @theme_accent;
-	border-right: 2px solid @theme_accent;
-	border-top: 2px solid @theme_accent;
-	border-bottom: 2px solid @theme_accent;
+	background-color: @color1;
+	border-left: 2px solid @color1;
+	border-right: 2px solid @color1;
+	border-top: 2px solid @color1;
+	border-bottom: 2px solid @color1;
 }
