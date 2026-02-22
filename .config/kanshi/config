@@ -1,0 +1,16 @@
+profile home {
+    output eDP-1 mode 1920x1200 position 0,0
+    output "ViewSonic Corporation VX2458-mhd VHT190500045" mode 1920x1080@120Hz position 1920,0
+    exec swaybg -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg -m fill
+}
+
+profile work {
+    output eDP-1 mode 1920x1200
+    output "Lenovo Group Limited LEN T32p-20 VNA939B7" mode 3840x2160@60Hz scale 1.5
+    exec swaybg -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg -m fill
+}
+
+profile default {
+    output eDP-1 mode 1920x1200
+    exec swaybg -i /usr/share/backgrounds/collin/maplestory_orbis_ship.jpg -m fill
+}
